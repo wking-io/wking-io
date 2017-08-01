@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { colors } from '../utils/constants'
+
 const Footer = styled.footer`
-  background: linear-gradient(to right top, #7b4397, #dc2430 75%) no-repeat;
+  background: ${colors.gradient} no-repeat;
   padding: 2rem 0;
   width: 100vw;
 
