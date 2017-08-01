@@ -1,21 +1,19 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import FancyLink from './FancyLink';
 
-import profilePic from '../img/profile-pic.jpg'
-import { rhythm } from '../utils/typography'
+import avatar from '../img/avatar.jpg';
 
-class Bio extends React.Component {
-  render() {
-    return (
-      <p>
-        <img src={profilePic} alt={`Kyle Mathews`} />
-        Written by <strong>Kyle Mathews</strong> who lives and works in San
-        Francisco building useful things.{' '}
-        <a href="https://twitter.com/kylemathews">
-          You should follow him on Twitter
-        </a>
-      </p>
-    )
-  }
-}
+const Avatar = styled.img`width: 50px;`;
 
-export default Bio
+const Bio = () =>
+  <p>
+    <Avatar src={avatar} alt="William King" />
+    Written by <strong>William King</strong> a Front End Developer and Design
+    Mentor for Skillcrush.{' '}
+    <FancyLink href="https://twitter.com/wking_io">
+      You should follow him on Twitter
+    </FancyLink>
+  </p>;
+
+export default Bio;

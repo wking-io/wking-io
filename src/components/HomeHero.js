@@ -1,14 +1,14 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
-import { Wrapper, Flex, FlexRow } from '../layouts/layout'
-import SocialItem from './SocialItem'
-import SocialLink from './SocialLink'
-import NoList from './NoList'
-import Jumbo from './Jumbo'
-import FancyLink from './FancyLink'
-import { icons, breakpoints } from '../utils/constants'
+import { Wrapper, Flex, FlexRow } from '../layouts/layout';
+import SocialItem from './SocialItem';
+import SocialLink from './SocialLink';
+import NoList from './NoList';
+import Jumbo from './Jumbo';
+import FancyLink from './FancyLink';
+import { icons, breakpoints } from '../utils/constants';
 
 const HomeHeader = styled.header`
   padding: 2rem 0 3.5rem 0;
@@ -20,7 +20,7 @@ const HomeHeader = styled.header`
   @media (max-width: ${breakpoints.s}) {
     padding: 0 0 4rem 0;
   }
-`
+`;
 
 const HomeHero = () =>
   <HomeHeader>
@@ -83,6 +83,6 @@ const HomeHero = () =>
         </FlexRow>
       </Flex>
     </Wrapper>
-  </HomeHeader>
+  </HomeHeader>;
 
-export default HomeHero
+export default HomeHero;

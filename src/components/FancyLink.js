@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
-import 'typeface-roboto'
+import 'typeface-roboto';
 
 const FancyLink = styled(Link)`
   font-family: "Roboto", sans-serif;
@@ -31,6 +31,6 @@ const FancyLink = styled(Link)`
   :hover::after {
     height: 1.5em;
   }
-`
+`;
 
-export default FancyLink
+export default FancyLink;

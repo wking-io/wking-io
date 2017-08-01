@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { breakpoints, icons } from '../utils/constants'
+import { breakpoints, icons } from '../utils/constants';
 
 const SocialLink = styled.a`
   text-decoration: none;
@@ -43,6 +43,6 @@ const SocialLink = styled.a`
       display: none;
     }
   }
-`
+`;
 
-export default SocialLink
+export default SocialLink;

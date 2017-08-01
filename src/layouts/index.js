@@ -1,16 +1,16 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import PropType from 'prop-types'
-import styled from 'styled-components'
+import React from 'react';
+import Link from 'gatsby-link';
+import PropType from 'prop-types';
+import styled from 'styled-components';
 
-import NavWrapper from '../components/NavWrapper'
-import FooterWrapper from '../components/FooterWrapper'
+import NavWrapper from '../components/NavWrapper';
+import FooterWrapper from '../components/FooterWrapper';
 
-const ContentWrapper = styled.div`min-height: 95vh;`
+const ContentWrapper = styled.div`min-height: 95vh;`;
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { location, children } = this.props;
 
     return (
       <div>
@@ -20,7 +20,7 @@ class Template extends React.Component {
         </ContentWrapper>
         <FooterWrapper />
       </div>
-    )
+    );
   }
 }
 
@@ -30,4 +30,4 @@ class Template extends React.Component {
 //   route: PropType.object,
 // }
 
-export default Template
+export default Template;

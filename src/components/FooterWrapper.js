@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { colors } from '../utils/constants'
+import { colors } from '../utils/constants';
 
 const Footer = styled.footer`
   background: ${colors.gradient} no-repeat;
@@ -12,11 +12,11 @@ const Footer = styled.footer`
     color: white;
     text-align: center;
   }
-`
+`;
 
 const FooterWrapper = () => {
-  const date = new Date()
-  const currentYear = date.getFullYear()
+  const date = new Date();
+  const currentYear = date.getFullYear();
 
   return (
     <Footer>
@@ -24,7 +24,7 @@ const FooterWrapper = () => {
         © 2016-{currentYear} William King, All Rights Reserved.
       </p>
     </Footer>
-  )
-}
+  );
+};
 
-export default FooterWrapper
+export default FooterWrapper;

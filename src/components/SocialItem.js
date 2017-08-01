@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { breakpoints } from '../utils/constants'
+import { breakpoints } from '../utils/constants';
 
 const SocialItem = styled.li`
   ${props =>
@@ -22,6 +22,6 @@ const SocialItem = styled.li`
   @media screen and (max-width: ${breakpoints.xs}) {
     ${props => (props.inline === 'xs' ? 'display: inline-block' : '')};
   }
-`
+`;
 
-export default SocialItem
+export default SocialItem;

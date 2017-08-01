@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { breakpoints, colors } from '../utils/constants'
-import 'typeface-roboto-slab'
+import { breakpoints, colors } from '../utils/constants';
+import 'typeface-roboto-slab';
 
 export const Jumbo = styled.h1`
   font-size: 5.8vw;
@@ -33,6 +33,6 @@ export const Jumbo = styled.h1`
       background-position: 0 9.15vw;
     }
   }
-`
+`;
 
-export default Jumbo
+export default Jumbo;

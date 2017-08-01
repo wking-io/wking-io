@@ -1,14 +1,14 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
-import { Wrapper, Flex, FlexRow } from '../layouts/layout'
-import SocialItem from './SocialItem'
-import SocialLink from './SocialLink'
-import NoList from './NoList'
-import Jumbo from './Jumbo'
-import FancyLink from './FancyLink'
-import { icons, breakpoints } from '../utils/constants'
+import { Wrapper, Flex, FlexRow } from '../layouts/layout';
+import SocialItem from './SocialItem';
+import SocialLink from './SocialLink';
+import NoList from './NoList';
+import Jumbo from './Jumbo';
+import FancyLink from './FancyLink';
+import { icons, breakpoints } from '../utils/constants';
 
 const LibraryHeader = styled.header`
   padding: 2rem 0 3.5rem 0;
@@ -20,7 +20,7 @@ const LibraryHeader = styled.header`
   @media (max-width: ${breakpoints.s}) {
     padding: 0 0 4rem 0;
   }
-`
+`;
 
 const LibraryHero = () =>
   <LibraryHeader>
@@ -83,6 +83,6 @@ const LibraryHero = () =>
         </FlexRow>
       </Flex>
     </Wrapper>
-  </LibraryHeader>
+  </LibraryHeader>;
 
-export default LibraryHero
+export default LibraryHero;

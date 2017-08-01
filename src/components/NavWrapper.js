@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { Wrapper, Flex } from '../layouts/layout'
-import { breakpoints } from '../utils/constants'
-import FancyLink from './FancyLink'
-import logo from '../img/logo.svg'
+import { Wrapper, Flex } from '../layouts/layout';
+import { breakpoints } from '../utils/constants';
+import FancyLink from './FancyLink';
+import logo from '../img/logo.svg';
 
 const Nav = styled.nav`
   background: #fff;
   padding: 2rem 0;
-`
+`;
 
 const Logo = styled.img`
   width: 10.25rem;
@@ -17,11 +17,11 @@ const Logo = styled.img`
   @media (max-width: ${breakpoints.s}) {
     width: 8rem;
   }
-`
+`;
 
 const NavWrapper = ({ location, ...props }) => {
-  const route = location === '/library' ? '/' : '/library'
-  const name = location === '/library' ? 'Home' : 'Library'
+  const route = location === '/library' ? '/' : '/library';
+  const name = location === '/library' ? 'Home' : 'Library';
 
   return (
     <Nav>
@@ -34,7 +34,7 @@ const NavWrapper = ({ location, ...props }) => {
         </Flex>
       </Wrapper>
     </Nav>
-  )
-}
+  );
+};
 
-export default NavWrapper
+export default NavWrapper;
