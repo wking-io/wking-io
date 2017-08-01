@@ -14,7 +14,10 @@
       "react",
       "config",
       "styled-components",
-      "react-helmet"
+      "react-helmet",
+      "bluebird",
+      "unist-util-select",
+      "fs-extra"
     ]
   },
   "rules": {

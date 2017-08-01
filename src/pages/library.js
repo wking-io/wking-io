@@ -30,10 +30,6 @@ class Library extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <LibraryHero />
-        <Bio />
-        <ul>
-          {pageLinks}
-        </ul>
       </div>
     );
   }

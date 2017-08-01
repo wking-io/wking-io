@@ -1,10 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 
 import { breakpoints, colors } from '../utils/constants';
 import 'typeface-roboto-slab';
 
-export const Jumbo = styled.h1`
+const Jumbo = styled.h1`
   font-size: 5.8vw;
   line-height: 1.25;
   font-family: "Roboto Slab", "Roboto", sans-serif;

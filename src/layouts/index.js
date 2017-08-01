@@ -1,12 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import PropType from 'prop-types';
-import styled from 'styled-components';
 
 import NavWrapper from '../components/NavWrapper';
 import FooterWrapper from '../components/FooterWrapper';
-
-const ContentWrapper = styled.div`min-height: 95vh;`;
+import { PageWrapper, ContentWrapper, Wrapper, Flex, Aside, Main } from '../layouts/layout';
+import SocialList from '../components/SocialList';
+import { socialAccounts } from '../utils/constants';
 
 class Template extends React.Component {
   render() {
@@ -14,20 +13,31 @@ class Template extends React.Component {
 
     return (
       <div>
-        <ContentWrapper>
+        <PageWrapper>
           <NavWrapper location={location.pathname} />
-          {children()}
-        </ContentWrapper>
+          <Wrapper>
+            <ContentWrapper>
+              <Flex directionM="column-reverse">
+                <Aside width="25%" widthM="100%" margin="0 2em 0 0">
+                  <SocialList accounts={socialAccounts} />
+                </Aside>
+                <Main>
+                  {children()}
+                </Main>
+              </Flex>
+            </ContentWrapper>
+          </Wrapper>
+        </PageWrapper>
         <FooterWrapper />
       </div>
     );
   }
 }
 
-// Template.propTypes = {
-//   children: PropType.function,
-//   location: PropType.object,
-//   route: PropType.object,
-// }
+Template.propTypes = {
+  children: PropType.func,
+  location: PropType.object,
+  route: PropType.object,
+};
 
 export default Template;

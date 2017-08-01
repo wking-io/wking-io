@@ -1,8 +1,7 @@
-import React from 'react';
 import styled, { injectGlobal } from 'styled-components';
+import 'typeface-roboto';
 
 import { breakpoints } from '../utils/constants';
-import 'typeface-roboto';
 
 injectGlobal`
   body {
@@ -36,6 +35,12 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const ContentWrapper = styled.div`
+  padding: 2rem 0 3.5rem 0;
+`;
+
+export const PageWrapper = styled.div`min-height: 95vh;`;
+
 export const Flex = styled.div`
   display: flex;
   flex-direction: ${props => props.direction || 'row'};
@@ -66,7 +71,7 @@ export const Flex = styled.div`
 
   @media screen and (max-width: ${breakpoints.xs}) {
     ${props =>
-      props.directionXS ? `flex-direction:${props.directionXS}` : ''};
+    (props.directionXS ? `flex-direction:${props.directionXS}` : '')};
     ${props => (props.justifyXS ? `justify-content:${props.justifyXS}` : '')};
     ${props => (props.alignmentXS ? `align-items:${props.alignmentXS}` : '')};
     ${props => (props.wrapXS ? 'flex-wrap: wrap' : '')};
@@ -97,3 +102,6 @@ export const FlexRow = styled.div`
     ${props => (props.marginXS ? `margin:${props.marginXS}` : '')};
   }
 `;
+
+export const Aside = FlexRow.withComponent('aside');
+export const Main = FlexRow.withComponent('main');

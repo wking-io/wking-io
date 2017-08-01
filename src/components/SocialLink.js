@@ -23,7 +23,7 @@ const SocialLink = styled.a`
     transition: all .25s ease-in-out;
   }
 
-  & .social__name {
+  & .social__name {  
     opacity: 0;
     transition: all .25s ease-in-out;
     transform: translateY(5px);

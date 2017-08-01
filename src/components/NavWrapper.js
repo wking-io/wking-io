@@ -1,4 +1,5 @@
 import React from 'react';
+import PropType from 'prop-types';
 import styled from 'styled-components';
 
 import { Wrapper, Flex } from '../layouts/layout';
@@ -19,7 +20,7 @@ const Logo = styled.img`
   }
 `;
 
-const NavWrapper = ({ location, ...props }) => {
+const NavWrapper = ({ location }) => {
   const route = location === '/library' ? '/' : '/library';
   const name = location === '/library' ? 'Home' : 'Library';
 
@@ -35,6 +36,10 @@ const NavWrapper = ({ location, ...props }) => {
       </Wrapper>
     </Nav>
   );
+};
+
+NavWrapper.propTypes = {
+  location: PropType.string,
 };
 
 export default NavWrapper;

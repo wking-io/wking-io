@@ -4,16 +4,22 @@ import FancyLink from './FancyLink';
 
 import avatar from '../img/avatar.jpg';
 
-const Avatar = styled.img`width: 50px;`;
+const Avatar = styled.img`
+  width: 80px;
+`;
+
+const BioWrapper = styled.div`
+  text-align: center;
+`;
 
 const Bio = () =>
-  <p>
+  <BioWrapper>
     <Avatar src={avatar} alt="William King" />
-    Written by <strong>William King</strong> a Front End Developer and Design
-    Mentor for Skillcrush.{' '}
+    <p>Written by William King, a Front End Developer and Design
+    Mentor for Skillcrush.</p>
     <FancyLink href="https://twitter.com/wking_io">
       You should follow him on Twitter
     </FancyLink>
-  </p>;
+  </BioWrapper>;
 
 export default Bio;
