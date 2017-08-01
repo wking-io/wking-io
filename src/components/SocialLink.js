@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import { breakpoints, icons } from "../utils/constants"
+import { breakpoints, icons } from '../utils/constants'
 
 const SocialLink = styled.a`
   text-decoration: none;
@@ -26,16 +26,16 @@ const SocialLink = styled.a`
   & .social__name {
     opacity: 0;
     transition: all .25s ease-in-out;
-    transform: translateY(5px); 
+    transform: translateY(5px);
   }
 
   &:hover .social__color {
-    fill: url("/#gradient"); 
+    fill: url("/#gradient");
   }
 
   &:hover .social__name {
     opacity: .35;
-    transform: translateY(0px); 
+    transform: translateY(0px);
   }
 
   @media screen and (max-width: ${breakpoints.m}) {

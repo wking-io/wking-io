@@ -1,8 +1,8 @@
-import React from "react"
-import Link from "gatsby-link"
-import styled from "styled-components"
+import React from 'react'
+import Link from 'gatsby-link'
+import styled from 'styled-components'
 
-import "typeface-roboto"
+import 'typeface-roboto'
 
 const FancyLink = styled(Link)`
   font-family: "Roboto", sans-serif;

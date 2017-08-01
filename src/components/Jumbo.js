@@ -1,14 +1,14 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 import { breakpoints, colors } from '../utils/constants'
-import "typeface-roboto-slab"
+import 'typeface-roboto-slab'
 
 export const Jumbo = styled.h1`
   font-size: 5.8vw;
   line-height: 1.25;
   font-family: "Roboto Slab", "Roboto", sans-serif;
-  margin: ${props => props.addSpace ? '0 0 0.5em 0' : 0};
+  margin: ${props => (props.addSpace ? '0 0 0.5em 0' : 0)};
 
   .underline {
     color: black;
@@ -26,7 +26,7 @@ export const Jumbo = styled.h1`
 
   @media screen and (max-width: ${breakpoints.m}) {
     font-size: 8vw;
-    margin: ${props => props.addSpace ? '0.75em 0 0.5em 0' : 0};
+    margin: ${props => (props.addSpace ? '0.75em 0 0.5em 0' : 0)};
 
     .underline {
       background-size: 100% 1.15vw;

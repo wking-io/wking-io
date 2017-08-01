@@ -1,17 +1,16 @@
-import React from "react"
-import { TypographyStyle } from "react-typography"
-import { injectGlobal } from "styled-components"
+import React from 'react'
+import { TypographyStyle } from 'react-typography'
+import { injectGlobal } from 'styled-components'
 
-import typography from "./utils/typography"
-import faviconTouch from "./img/favicons/apple-touch-icon.png"
-import favicon32 from "./img/favicons/favicon-32x32.png"
-import favicon16 from "./img/favicons/favicon-16x16.png"
-import manifest from "./img/favicons/manifest.json"
-import faviconPinned from "./img/favicons/safari-pinned-tab.svg"
+import typography from './utils/typography'
+import faviconTouch from './img/favicons/apple-touch-icon.png'
+import favicon32 from './img/favicons/favicon-32x32.png'
+import favicon16 from './img/favicons/favicon-16x16.png'
+import manifest from './img/favicons/manifest.json'
+import faviconPinned from './img/favicons/safari-pinned-tab.svg'
 
 export default class HTML extends React.Component {
   render() {
-
     return (
       <html lang="en">
         <head>
