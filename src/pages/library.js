@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Bio from '../components/Bio'
+import LibraryHero from '../components/LibraryHero'
 
 class Library extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class Library extends React.Component {
     return (
       <div>
         <Helmet title={siteTitle} />
+        <LibraryHero />
         <Bio />
         <ul>
           {pageLinks}

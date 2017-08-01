@@ -10,7 +10,7 @@ import Jumbo from './Jumbo'
 import FancyLink from './FancyLink'
 import { icons, breakpoints } from '../utils/constants'
 
-const HomeHeader = styled.header`
+const LibraryHeader = styled.header`
   padding: 2rem 0 3.5rem 0;
 
   @media (max-width: ${breakpoints.m}) {
@@ -22,8 +22,8 @@ const HomeHeader = styled.header`
   }
 `
 
-const HomeHero = () =>
-  <HomeHeader>
+const LibraryHero = () =>
+  <LibraryHeader>
     <Wrapper>
       <Flex directionM="column-reverse">
         <FlexRow width="25%" widthM="100%" margin="0 2em 0 0">
@@ -83,6 +83,6 @@ const HomeHero = () =>
         </FlexRow>
       </Flex>
     </Wrapper>
-  </HomeHeader>
+  </LibraryHeader>
 
-export default HomeHero
+export default LibraryHero

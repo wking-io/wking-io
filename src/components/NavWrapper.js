@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Wrapper, Flex } from '../layouts/layout'
+import { breakpoints } from '../utils/constants'
 import FancyLink from './FancyLink'
 import logo from '../img/logo.svg'
 
@@ -10,7 +11,13 @@ const Nav = styled.nav`
   padding: 2rem 0;
 `
 
-const Logo = styled.img`width: 10.25rem;`
+const Logo = styled.img`
+  width: 10.25rem;
+
+  @media (max-width: ${breakpoints.s}) {
+    width: 8rem;
+  }
+`
 
 const NavWrapper = ({ location, ...props }) => {
   const route = location === '/library' ? '/' : '/library'
