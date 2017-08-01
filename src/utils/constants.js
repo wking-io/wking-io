@@ -3,7 +3,7 @@ import React from 'react'
 export const colors = {
   purple: '#7B4397',
   red: '#DC2430',
-  gradient: 'linear-gradient(to right top, #7B4397, #DC2430 75%)',
+  gradient: 'linear-gradient(to right, #7B4397, #DC2430 75%)',
 }
 
 export const breakpoints = {
