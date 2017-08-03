@@ -1,8 +1,5 @@
 import React from 'react';
-import { TypographyStyle } from 'react-typography';
-import { injectGlobal } from 'styled-components';
 
-import typography from './utils/typography';
 import faviconTouch from './img/favicons/apple-touch-icon.png';
 import favicon32 from './img/favicons/favicon-32x32.png';
 import favicon16 from './img/favicons/favicon-16x16.png';
@@ -28,7 +25,7 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1.0"
           />
           {this.props.headComponents}
-          <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet" />
           {this.props.styles}
         </head>
         <body>

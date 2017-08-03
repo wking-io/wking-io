@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-import { breakpoints, icons } from '../utils/constants';
+import { breakpoints } from '../utils/constants';
 
 const SocialLink = styled.a`
   text-decoration: none;

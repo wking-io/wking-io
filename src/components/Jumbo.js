@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { breakpoints, colors } from '../utils/constants';
-import 'typeface-roboto-slab';
 
 const Jumbo = styled.h1`
   font-size: 5.8vw;
