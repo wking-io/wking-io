@@ -28,7 +28,7 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1.0"
           />
           {this.props.headComponents}
-          <TypographyStyle typography={typography} />
+          <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet">
           {this.props.styles}
         </head>
         <body>
