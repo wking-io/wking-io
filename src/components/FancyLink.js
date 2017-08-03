@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
+import { breakpoints } from '../utils/constants';
+
 const FancyLink = styled(Link)`
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -28,6 +30,12 @@ const FancyLink = styled(Link)`
 
   :hover::after {
     height: 1.5em;
+  }
+
+  @media screen and (max-width: ${breakpoints.m}) {
+    :hover::after {
+      height: 0.5em;
+    }
   }
 `;
 

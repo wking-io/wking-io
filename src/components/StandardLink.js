@@ -9,7 +9,7 @@ const StandardLink = styled.a`
   background-image: ${colors.gradient};
   background-repeat: no-repeat;
   background-size: 100% 4px;
-  background-position: 0 4px;
+  background-position: 0 12px;
 
   :hover {
     background-image: linear-gradient(transparent, transparent);

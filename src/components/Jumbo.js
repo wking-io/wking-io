@@ -29,6 +29,7 @@ const Jumbo = styled.h1`
     .underline {
       background-size: 100% 1.15vw;
       background-position: 0 9.15vw;
+      background-image: ${colors.gradient};
     }
   }
 `;

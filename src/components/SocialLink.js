@@ -10,34 +10,36 @@ const SocialLink = styled.a`
   align-items: center;
   flex-direction: row;
 
-  & .social__icon {
+  .social__icon {
     width: 2.5rem;
     height: auto;
     fill: #000;
     margin: 0 2rem 0 0;
   }
 
-  & .social__color {
+  .social__color {
     fill: #000;
     transition: all .25s ease-in-out;
   }
 
-  & .social__name {  
+  .social__name {  
     opacity: 0;
     transition: all .25s ease-in-out;
     transform: translateY(5px);
   }
 
-  &:hover .social__color {
+  :hover .social__color {
     fill: url("/#gradient");
   }
 
-  &:hover .social__name {
+  :hover .social__name {
     opacity: .35;
     transform: translateY(0px);
   }
 
   @media screen and (max-width: ${breakpoints.m}) {
+    margin: 0;
+    
     .social__name {
       display: none;
     }

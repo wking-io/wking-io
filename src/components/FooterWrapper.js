@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors } from '../utils/constants';
+import { breakpoints, colors } from '../utils/constants';
 
 const Footer = styled.footer`
   background: ${colors.gradient} no-repeat;
   padding: 2rem 0;
   width: 100vw;
 
-  & p {
+  p {
     color: white;
     text-align: center;
   }
@@ -21,7 +21,7 @@ const FooterWrapper = () => {
   return (
     <Footer>
       <p>
-        © 2016-{currentYear} William King, All Rights Reserved.
+        © 2016-{currentYear} All Rights Reserved.
       </p>
     </Footer>
   );
