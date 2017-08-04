@@ -1,15 +1,15 @@
-const _ = require("lodash")
-const Promise = require("bluebird")
-const path = require("path")
-const select = require(`unist-util-select`)
-const fs = require(`fs-extra`)
+const _ = require('lodash');
+const Promise = require('bluebird');
+const path = require('path');
+const select = require('unist-util-select');
+const fs = require('fs-extra');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const pages = []
-    const blogPost = path.resolve("./src/templates/blog-post.js")
+    const pages = [];
+    const blogPost = path.resolve('./src/templates/blog-post.js');
     resolve(
       graphql(
         `
@@ -24,24 +24,23 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           }
         }
       }
-    `
-      ).then(result => {
+    `).then((result) => {
         if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          console.log(result.errors);
+          reject(result.errors);
         }
 
         // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
+        _.each(result.data.allMarkdownRemark.edges, (edge) => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
             context: {
               path: edge.node.frontmatter.path,
-            },
+            }
           })
         })
       })
     )
-  })
-}
+  });
+};

@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
     title: 'Front End Developer | William King',
     author: 'William King',
