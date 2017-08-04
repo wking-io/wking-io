@@ -7,6 +7,8 @@ import { PageWrapper, ContentWrapper, Wrapper, Flex, Aside, Main } from '../layo
 import SocialList from '../components/SocialList';
 import { socialAccounts } from '../utils/constants';
 
+import '../css/theme.css';
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props;

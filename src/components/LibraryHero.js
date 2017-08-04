@@ -20,7 +20,7 @@ const LibraryHeader = styled.header`
 
 const LibraryHero = () =>
   <LibraryHeader>
-    <p>Welcome to the one and only</p>
+    <p>Welcome to the one and only...</p>
     <Jumbo addSpace>Library Of Random Knowledge</Jumbo>
     <TwoColumn>
       <p>
