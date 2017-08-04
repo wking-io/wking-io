@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors } from '../utils/constants';
+import { colors, breakpoints } from '../utils/constants';
 
 const StandardLink = styled.a`
   color: black;
@@ -8,11 +8,15 @@ const StandardLink = styled.a`
   position: relative;
   background-image: ${colors.gradient};
   background-repeat: no-repeat;
-  background-size: 100% 4px;
-  background-position: 0 12px;
+  background-size: 100% 0.125em;
+  background-position: 0 1.25em;
+  display: inline-block;
 
   :hover {
-    background-image: linear-gradient(transparent, transparent);
+    background-image: ${colors.gradient}, linear-gradient(#ededed, #ededed);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 0.125em, 100%;
+    background-position: 0 1.25em, 0;
   }
 `;
 
