@@ -19,7 +19,11 @@ const SocialLink = styled.a`
 
   .social__color {
     fill: #000;
-    transition: all .25s ease-in-out;
+    opacity: 1;
+  }
+
+  .social__color--hover {
+    opacity: 0;
   }
 
   .social__name {  
@@ -29,7 +33,11 @@ const SocialLink = styled.a`
   }
 
   :hover .social__color {
-    fill: url("/#gradient");
+    opacity: 0;
+  }
+
+  :hover .social__color--hover {
+    opacity: 1;
   }
 
   :hover .social__name {
