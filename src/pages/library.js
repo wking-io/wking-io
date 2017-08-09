@@ -1,7 +1,6 @@
 import React from 'react';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
-import 'highlight.js/styles/ocean.css';
 
 import LibraryHero from '../components/LibraryHero';
 import Book from '../components/Book';
