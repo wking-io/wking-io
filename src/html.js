@@ -6,8 +6,27 @@ import favicon16 from './img/favicons/favicon-16x16.png';
 import manifest from './img/favicons/manifest.json';
 import faviconPinned from './img/favicons/safari-pinned-tab.svg';
 
+let stylesStr;
+if (process.env.NODE_ENV === 'production') {
+  try {
+    stylesStr = require(`!raw-loader!../public/styles.css`);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 export default class HTML extends React.Component {
   render() {
+    let css;
+    if (process.env.NODE_ENV === 'production') {
+      css = (
+        <style
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
+        />
+      );
+    }
+
     return (
       <html lang="en">
         <head>
@@ -28,6 +47,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet" />
           {this.props.styles}
+          {css}
         </head>
         <body>
           <div
