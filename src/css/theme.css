@@ -8,7 +8,7 @@
   color: #65737e;
 }
 
-/* Red */
+/* Blue */
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag,
@@ -17,7 +17,7 @@
 .hljs-selector-class,
 .hljs-regexp,
 .hljs-deletion {
-  color: #bf616a;
+  color: #7398EF;
 }
 
 /* Orange */
@@ -29,12 +29,12 @@
 .hljs-params,
 .hljs-meta,
 .hljs-link {
-  color: #d08770;
+  color: #E26374;
 }
 
 /* Yellow */
 .hljs-attribute {
-  color: #ebcb8b;
+  color: #FFB042;
 }
 
 /* Green */
@@ -42,19 +42,19 @@
 .hljs-symbol,
 .hljs-bullet,
 .hljs-addition {
-  color: #a3be8c;
+  color: #66BCF9;
 }
 
 /* Blue */
 .hljs-title,
 .hljs-section {
-  color: #8fa1b3;
+  color: #6D85D6;
 }
 
 /* Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #b48ead;
+  color: #B48ECC;
 }
 
 .hljs {
@@ -79,4 +79,5 @@ pre.lowlight {
   white-space: pre-wrap;
   background: #2b303b;
   padding: 1em 2em;
+  border-radius: 4px;
 }
