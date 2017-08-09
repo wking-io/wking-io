@@ -5,7 +5,7 @@ import NavWrapper from '../components/NavWrapper';
 import FooterWrapper from '../components/FooterWrapper';
 import { PageWrapper, ContentWrapper, Wrapper, Flex, Aside, Main } from '../layouts/layout';
 import SocialList from '../components/SocialList';
-import { socialAccounts } from '../utils/constants';
+import socialAccounts from '../data/socialAccounts';
 
 import '../css/theme.css';
 
