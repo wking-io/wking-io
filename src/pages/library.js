@@ -1,11 +1,13 @@
 import React from 'react';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import 'highlight.js/styles/ocean.css';
 
 import LibraryHero from '../components/LibraryHero';
 import Book from '../components/Book';
 import knowledgeBase from '../data/knowledgeBase';
 import buildLibrary from '../utils/buildLibrary';
+
 
 class Library extends React.Component {
   render() {

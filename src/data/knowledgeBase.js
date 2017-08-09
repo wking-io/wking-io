@@ -46,22 +46,22 @@ const knowledgeBase = [
     book: 'javascript',
     chapter: 'How do I get all the siblings of an element?',
     content: `
-    const transformSibs = (el, callback) => {
-      const siblings = [];
+const transformSibs = (el, callback) => {
+  const siblings = [];
 
-      for (let sibling = el.parentNode.firstChild ; sibling; sibling = sibling.nextSibling ) {
-        if ( sibling.nodeType == 1 && sibling != el ) {
-          callback(sibling);
-          siblings.push( sibling );
-        }
-      }
-      return siblings;
+  for (let sibling = el.parentNode.firstChild ; sibling; sibling = sibling.nextSibling ) {
+    if ( sibling.nodeType == 1 && sibling != el ) {
+      callback(sibling);
+      siblings.push( sibling );
     }
-     
-    // Use a curried function to pass more arguments to callback 
-    const removeClass = class => sibling => sibling.classList.remove(class);
-    const $item = document.querySelector('.item');
-    transformSibs($item, removeClass('active'));
+  }
+  return siblings;
+}
+  
+// Use a curried function to pass more arguments to callback 
+const removeClass = class => sibling => sibling.classList.remove(class);
+const $item = document.querySelector('.item');
+transformSibs($item, removeClass('active'));
     `,
   },
 ];
