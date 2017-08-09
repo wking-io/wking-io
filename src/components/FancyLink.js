@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
-import { breakpoints } from '../utils/constants';
+import { breakpoints, colors } from '../utils/constants';
 
 const FancyLink = styled(Link)`
   font-family: "Roboto", sans-serif;
@@ -18,7 +18,7 @@ const FancyLink = styled(Link)`
 
   :after {
     content: "";
-    background-image: linear-gradient(to right top, #7B4397, #DC2430 75%);
+    background-image: ${colors.gradient};
     height: 0.5em;
     position: absolute;
     left: 0;

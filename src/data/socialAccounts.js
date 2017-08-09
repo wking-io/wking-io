@@ -12,9 +12,11 @@ const socialAccounts = [
         className="social__icon"
       >
         <defs>
-          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-twitter">
-            <stop stopColor="#7B4397" offset="0%" />
-            <stop stopColor="#DC2430" offset="100%" />
+          <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="gradient-twitter">
+            <stop stopColor="#FFA100" offset="0%" />
+            <stop stopColor="#D83156" offset="33%" />
+            <stop stopColor="#143391" offset="66%" />
+            <stop stopColor="#0093FF" offset="100%" />
           </linearGradient>
         </defs>
         <path
@@ -39,9 +41,11 @@ const socialAccounts = [
         className="social__icon"
       >
         <defs>
-          <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient-insta">
-            <stop stopColor="#7B4397" offset="0%" />
-            <stop stopColor="#DC2430" offset="100%" />
+          <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="gradient-insta">
+            <stop stopColor="#FFA100" offset="0%" />
+            <stop stopColor="#D83156" offset="33%" />
+            <stop stopColor="#143391" offset="66%" />
+            <stop stopColor="#0093FF" offset="100%" />
           </linearGradient>
         </defs>
         <g
