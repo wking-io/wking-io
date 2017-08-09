@@ -17,7 +17,15 @@ You can follow Github's guide here: [Fork A Repo](https://help.github.com/articl
 ### Running in development
 `gatsby develop`
 
+## Wanna help? 
+I have tasks I am adding to the issues to help me keep track of the project. I have gotten it to a state now to where I want to use branches and proper PRs to manage updates. Take a look around in there or make your own if you think my code could use some help :)
+
 ## [WIP] Changelog
+
+**08 / 09 / 2017**
+Update, I have figured out a few things I want to do. I am loving importing data from any JS file. I have used it to add social accounts and a knowledgebase. Wanted to simulate pulling in real data so that I could get more familar with manipulating it.
+
+I have been able to pull in the added objects / rows in the knowledgebase data file and convert them to a book -> chapter format. Using react-lowlight I added syntax highlighting to the library page and look forward to improving the code examples.
 
 **08 / 01 / 2017**
 This is where it all begins. I will outline what I am using below that I think might be relevant.
