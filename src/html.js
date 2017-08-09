@@ -24,6 +24,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <script src='/static/prism.js'></script>
           {this.props.headComponents}
           <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet" />
           {this.props.styles}
@@ -34,7 +35,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src='/static/prism.js'></script>
         </body>
       </html>
     );
