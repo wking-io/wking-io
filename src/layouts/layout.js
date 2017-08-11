@@ -1,10 +1,15 @@
 import styled, { injectGlobal } from 'styled-components';
-import 'typeface-roboto';
 
-import { breakpoints } from '../utils/constants';
+import { breakpoints, colors } from '../utils/constants';
 
 injectGlobal`
+  html {
+    background-image: linear-gradient(to bottom, ${colors.secondary}, ${colors.primary});
+    padding: 0.85em;
+  }
   body {
+    background-color: white;
+    color: ${colors.primary};
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;

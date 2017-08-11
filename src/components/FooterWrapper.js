@@ -4,12 +4,9 @@ import styled from 'styled-components';
 import { breakpoints, colors } from '../utils/constants';
 
 const Footer = styled.footer`
-  background: ${colors.gradient} no-repeat;
   padding: 2rem 0;
-  width: 100vw;
 
   p {
-    color: white;
     text-align: center;
   }
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { breakpoints } from '../utils/constants';
+import { breakpoints, colors } from '../utils/constants';
 
 const SocialLink = styled.a`
   text-decoration: none;
@@ -28,6 +28,7 @@ const SocialLink = styled.a`
 
   .social__name {  
     opacity: 0;
+    color: ${colors.secondary};
     transition: all .25s ease-in-out;
     transform: translateY(5px);
   }
@@ -41,7 +42,7 @@ const SocialLink = styled.a`
   }
 
   :hover .social__name {
-    opacity: .35;
+    opacity: 1;
     transform: translateY(0px);
   }
 
