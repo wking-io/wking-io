@@ -1,4 +1,5 @@
 import React from 'react';
+import { colors } from '../utils/constants';
 
 const socialAccounts = [
   {
@@ -12,11 +13,9 @@ const socialAccounts = [
         className="social__icon"
       >
         <defs>
-          <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="gradient-twitter">
-            <stop stopColor="#FFA100" offset="0%" />
-            <stop stopColor="#D83156" offset="33%" />
-            <stop stopColor="#143391" offset="66%" />
-            <stop stopColor="#0093FF" offset="100%" />
+          <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="gradient-twitter">
+            <stop stopColor={colors.secondary} offset="0%" />
+            <stop stopColor={colors.primary} offset="100%" />
           </linearGradient>
         </defs>
         <path
@@ -41,11 +40,9 @@ const socialAccounts = [
         className="social__icon"
       >
         <defs>
-          <linearGradient x1="0%" y1="60%" x2="100%" y2="0%" id="gradient-insta">
-            <stop stopColor="#FFA100" offset="0%" />
-            <stop stopColor="#D83156" offset="33%" />
-            <stop stopColor="#143391" offset="66%" />
-            <stop stopColor="#0093FF" offset="100%" />
+          <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="gradient-insta">
+            <stop stopColor={colors.secondary} offset="0%" />
+            <stop stopColor={colors.primary} offset="100%" />
           </linearGradient>
         </defs>
         <g

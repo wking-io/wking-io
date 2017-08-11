@@ -1,7 +1,10 @@
 export const colors = {
+  primary: '#23272C',
+  secondary: '#8E99A8',
+  accent: '#F3F4F6',
   purple: '#7B4397',
   red: '#DC2430',
-  gradient: 'linear-gradient(70deg, #FFA100, #D83156, #143391, #0093FF)',
+  gradient: 'linear-gradient(to right, #F3F4F6, #8E99A8 70%)',
 };
 
 export const breakpoints = {
