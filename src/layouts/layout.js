@@ -5,7 +5,7 @@ import { breakpoints, colors } from '../utils/constants';
 injectGlobal`
   html {
     background-image: linear-gradient(to bottom, ${colors.secondary}, ${colors.primary});
-    padding: 0.85em;
+    padding: 0.5em;
   }
   body {
     background-color: white;
