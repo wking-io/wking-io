@@ -13,7 +13,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.img`
-  width: 10.25rem;
+  width: 6.25rem;
 
   @media (max-width: ${breakpoints.s}) {
     width: 8rem;
