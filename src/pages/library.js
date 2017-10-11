@@ -4,8 +4,7 @@ import Helmet from 'react-helmet';
 
 
 import LibraryHero from '../components/LibraryHero';
-import Book from '../components/Book';
-import Gist from '../components/Gist';
+import Bookshelf from '../components/Bookshelf';
 import knowledgeBase from '../data/knowledgeBase';
 import buildLibrary from '../utils/buildLibrary';
 
@@ -19,7 +18,7 @@ class Library extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <LibraryHero />
-        <Gist id='210693d2403ebb7ab44c9fcdc864bd48' />
+        <Bookshelf books={knowledgeBase} />
       </div>
     );
   }

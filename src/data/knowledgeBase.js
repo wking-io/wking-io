@@ -1,67 +1,38 @@
 const knowledgeBase = [
   {
-    _id: '1',
-    book: 'scss',
-    chapter: 'How do I make a magical underline that works on line breaks and can be any color I want?',
-    content: `
-.underline--magical {
-  background-image: linear-gradient;
-  background-repeat: none;
-  background-size: 100% 4px // how-thick;
-  background-position: 0 8px // how-far-down;
-}
-    `,
+    title: 'Javascript',
+    chapters: [
+      {
+        title: 'How do I get all the siblings of an element?',
+        gist: '4aa0e683ba01493d2a2cdf6bac064045',
+      },
+      {
+        title: 'How can I transform siblings of an element?',
+        gist: '69f537844deb5cbff248cb5346fb00b0',
+      },
+      {
+        title: 'How can I pass arguments to a callback function?',
+        gist: 'c5af5175905cf99f2a53063a8e30c8e7',
+      },
+    ],
   },
   {
-    _id: '2',
-    book: 'javascript',
-    chapter: 'How do I get all the siblings of an element?',
-    content: `
-const getSibs = (el) => Array
-  .from(el.parentNode.childNodes);
-  .filter(child => child.nodeType == 1 && child != el);
-}
-    `,
+    title: 'Wordpress',
+    chapters: [
+      {
+        title: 'How do I create responsive background images in Wordpress and preload them for speed?',
+        gist: '210693d2403ebb7ab44c9fcdc864bd48',
+      },
+    ],
   },
   {
-    _id: '3',
-    book: 'scss',
-    chapter: 'How do I make a magical underline that works on line breaks and can be any color I want?',
-    content: `
-.underline--magical {
-  background-image: linear-gradient;
-  background-repeat: none;
-  background-size: 100% 4px // how-thick;
-  background-position: 0 8px // how-far-down;
-}
-    `,
-  },
-  {
-    _id: '4',
-    book: 'javascript',
-    chapter: 'How can I transform siblings of an element?',
-    content: `
-const transformSibs = (el, callback) => Array
-  .from(el.parentNode.childNodes)
-  .filter(child => child.nodeType == 1 && child != el)
-  .forEach(sibling => {
-    callback(sibling);
-    return sibling;
-  });
-    `,
-  },
-  {
-    _id: '5',
-    book: 'javascript',
-    chapter: 'How can I pass arguments to a callback function?',
-    content: `
-import transformSibs from 'transformSibs';
-
-// Use a curried function to pass more arguments to callback 
-const removeClass = className => el => el.classList.remove(className);
-const $item = document.querySelector('.item');
-transformSibs($item, removeClass('active'));
-    `,
+    title: 'SCSS/CSS',
+    chapters: [
+      {
+        title: 'How do I make a magical underline that works on line breaks and can be any color I want?',
+        gist: 'efc20779b8c9751a6b6a507e3e1ba53b',
+      },
+    ],
   },
 ];
 
