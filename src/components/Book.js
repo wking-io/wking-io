@@ -2,24 +2,22 @@ import React from 'react';
 import PropType from 'prop-types';
 
 import BookTitle from './BookTitle';
-import Chapter from './Chapter';
+import Gist from './Gist';
 
-const Book = ({ book, title }) => (
+const Book = ({ title, chapters }) => (
   <section>
     <BookTitle>{title}</BookTitle>
-    {book.map(chapter =>
-      <Chapter
-        key={chapter._id}
-        book={chapter.book}
-        chapter={chapter.chapter}
-        content={chapter.content}
-      />)
-    }
+    {chapters.map(chapter => (
+      <div>
+        <h2>{chapter.title}</h2>
+        <Gist id={chapter.gist} />
+      </div>
+    ))}
   </section>
 );
 
 Book.propTypes = {
-  book: PropType.arrayOf(PropType.object),
+  chapters: PropType.arrayOf(PropType.object),
   title: PropType.string,
 };
 

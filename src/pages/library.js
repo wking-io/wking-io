@@ -2,11 +2,11 @@ import React from 'react';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 
+
 import LibraryHero from '../components/LibraryHero';
-import Book from '../components/Book';
+import Bookshelf from '../components/Bookshelf';
 import knowledgeBase from '../data/knowledgeBase';
 import buildLibrary from '../utils/buildLibrary';
-
 
 class Library extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class Library extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <LibraryHero />
-        {books.map(book => <Book key={book} title={book} book={library[book]}/>)}
+        <Bookshelf books={knowledgeBase} />
       </div>
     );
   }
