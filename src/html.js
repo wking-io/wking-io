@@ -34,7 +34,7 @@ export default class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           <link rel="manifest" href={manifest} />
-          <link rel="mask-icon" href={faviconPinned} color="#5bbad5" />
+          <link rel="mask-icon" href={faviconPinned} color="#e33532" />
           <meta name="theme-color" content="#ffffff" />
 
           <meta charSet="utf-8" />
