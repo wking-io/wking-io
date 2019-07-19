@@ -13,7 +13,7 @@ const Bio = () =>
     <Avatar src={avatar} alt="William King" />
     Written by <strong>William King</strong> a Front End Developer and Design
     Mentor for Skillcrush.{' '}
-    <FancyLink href="https://twitter.com/wking_io">
+    <FancyLink href="https://twitter.com/wking__">
       You should follow him on Twitter
     </FancyLink>
   </p>;
