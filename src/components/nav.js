@@ -6,10 +6,12 @@ import { Link } from "gatsby"
 import { LogoIcon } from "./icons"
 
 const Nav = () => (
-  <header>
-    <h1 className="w-auto h-4">
-      <span className="visually-hidden">wking</span>
-      <LogoIcon />
+  <header className="flex justify-between items-center px-8 md:px-16 py-6 absolute top-0 left-0 w-full">
+    <h1 className="w-auto h-8 md:h-12">
+      <Link to="/">
+        <span className="visually-hidden">wking</span>
+        <LogoIcon />
+      </Link>
     </h1>
     <Link className="link" to="/articles">
       Articles

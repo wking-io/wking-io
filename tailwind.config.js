@@ -3,6 +3,7 @@ const colors = {
   white: "#ffffff",
   primary: "#FF8C42",
   "primary-dark": "#E33532",
+  transparent: "transparent",
   grey: {
     "100": "#F0F4F8",
     "200": "#D9E2EC",
