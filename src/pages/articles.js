@@ -5,22 +5,30 @@ import { graphql } from "gatsby"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import { Newsletter } from "../components/newsletter"
 
 const Articles = ({ data }) => (
   <Layout>
-    <SEO title="wking | Articles" />
-    <div>
-      <h2>Articles.</h2>
-      <p>This is where the articles will go.</p>
+    <SEO title="Articles" />
+    <div className="max-w-3xl mx-auto pt-40 text-black pb-24">
+      <h2 className="font-display font-bold text-6xl leading-tight mb-12">
+        Articles.
+      </h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
-          <a href={node.fields.slug}>
-            <h3>{node.frontmatter.title}</h3>
-            <p>{node.frontmatter.date}</p>
+          <a
+            className="article-card p-8 block bg-grey-100 mb-6"
+            href={node.fields.slug}
+          >
+            <h3 className="font-display text-black font-bold text-2xl mb-2">
+              {node.frontmatter.title}
+            </h3>
+            <p className="text-grey-600">{node.frontmatter.date}</p>
           </a>
         </div>
       ))}
     </div>
+    <Newsletter />
   </Layout>
 )
 

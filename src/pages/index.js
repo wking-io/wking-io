@@ -9,7 +9,7 @@ import { NewsletterInput } from "../components/newsletter"
 
 const IndexPage = () => (
   <Layout>
-    <SEO />
+    <SEO title="I build things for the web" />
     <div className="flex flex-col min-h-screen text-black">
       <div className="flex-1 flex items-end justify-center">
         <h2 className="homepage-hero font-display font-bold leading-tight md:mb-20 pt-40 p-12 md:p-0 md:pt-32">
