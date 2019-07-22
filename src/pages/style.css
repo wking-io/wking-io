@@ -19,7 +19,7 @@
 }
 
 .btn {
-  @apply text-white bg-black leading-none text-center inline-block py-4 px-12 font-medium shadow cursor-pointer;
+  @apply text-white bg-black rounded leading-none text-center inline-block py-4 px-12 font-medium shadow cursor-pointer;
   transition: all 0.1s ease-in-out;
 }
 

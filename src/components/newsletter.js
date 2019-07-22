@@ -2,12 +2,25 @@
 import React from "react"
 
 export const NewsletterInput = ({ dark = false }) => (
-  <form className="w-full">
+  <form
+    className="w-full"
+    name="Newsletter Signups"
+    method="POST"
+    action="/newsletter-thank-you"
+    netlify-honeypot="bot-field"
+    data-netlify="true"
+  >
     <div
       className={`newsletter-input-${
         dark ? `dark` : `light`
       } rounded border border-black p-2 flex flex-col md:flex-row justify-between w-full bg-white`}
     >
+      <input type="hidden" name="form-name" value="Newlsetter Signups" />
+      <p class="visually-hidden">
+        <label>
+          Don’t fill this out if you're human: <input name="bot-field" />
+        </label>
+      </p>
       <input
         className="pt-2 text-center md:text-left pb-4 md:p-2 flex-1 text-black"
         type="text"
