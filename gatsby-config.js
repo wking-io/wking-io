@@ -41,5 +41,24 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto Slab`,
+            subsets: [`latin`],
+            variants: [`700`],
+            formats: [`woff`, `woff2`],
+          },
+          {
+            family: `Fira Sans`,
+            subsets: [`latin`],
+            variants: [`400`, `400i`, `500`, `500i`, `700`, `700i`],
+            formats: [`woff`, `woff2`],
+          },
+        ],
+      },
+    },
   ],
 }
