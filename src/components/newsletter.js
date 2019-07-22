@@ -28,7 +28,7 @@ export const NewsletterInput = ({ dark = false }) => (
       />
       <input
         className="btn btn--primary w-auto px-3 capitalize"
-        type="text"
+        type="submit"
         value="Send me updates"
       />
     </div>
