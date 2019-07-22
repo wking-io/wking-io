@@ -25,6 +25,7 @@ export const NewsletterInput = ({ dark = false }) => (
         className="pt-2 text-center md:text-left pb-4 md:p-2 flex-1 text-black"
         type="text"
         placeholder="Enter email address..."
+        name="Email Address"
       />
       <input
         className="btn btn--primary w-auto px-3 capitalize"
