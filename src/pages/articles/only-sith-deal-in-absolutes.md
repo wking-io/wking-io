@@ -1,0 +1,28 @@
+---
+title: "Only Sith deal in absolutes."
+date: "2018-12-15"
+---
+
+### Thoughts on the "right way" to build software
+
+I’ve been thinking a lot lately about the concept of absolutes in software development, especially the idea that there’s a “right way” to build software. When I was first learning, I naturally focused on determining the right way to do something. It wasn’t too long, though, before I ran into a situation where I realized that “best practice” was not the best choice.
+
+​​I remember when this realization hit me — I was so confused and also a little concerned. If the “best practice” isn’t always the best choice, how did I know that other absolutes I relied on were any better?​​
+
+​​Well, the joke was on me. I soon began to learn that all of those “absolutes” were not absolute at all. Learning this made me wonder…was the software I had written before bad? Had I been doing my job wrong all this time? ( Spoiler: The answer is no! )
+
+### Sometimes You Only Have A Hammer
+
+> I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.
+
+We have all heard one version or another of Maslow’s Hammer. It is often used to point out cases of cognitive bias where we tend to rely (many times blindly) on the tool we are familiar with instead of picking the right tool for the job. But there’s a fundamental problem with that logic. It assumes that the person with the hammer has a toolbox of all the tools they need, and they already know how to use each and every one of them. However, sometimes you only have a hammer.
+
+So, no, the code I wrote when I only had a hammer was not bad. I had been doing the best job I could with the tools I had. In a way, and especially for those of us who are JavaScript developers, that’s the constant state we’re in. And that is why we cannot deal in absolutes. We have to work with the tools we have in the context of the problems we face in an always-growing environment.
+
+As a new developer, the goal is learning all the tools a developer needs. But if we hope to move into senior roles, that goal must evolve — it becomes a question of making measured choices according to the knowledge and tools we have acquired. Growth happens not when we adhere strictly to the best practices, treating them as absolutes, but when, instead, we can answer when and why a solution is the right choice.
+
+### P.S. About Those “Best” Practices…
+
+This article is not trying to say best practices are wrong and you should not be learning them. Still, it’s important to clarify that “best” doesn’t mean “only”. Best practices are a culmination of solutions from experienced developers where this solution solves the problem in most contexts 87% (totally made up statistic to make the point) of the time.
+
+​​As someone new to software development, the breadth of information to learn is so large that focusing on the best practices first is the right way to go. You have plenty of time down the road to learn the cases where these best practices are not the best answer — and to create better than best practices of your own.

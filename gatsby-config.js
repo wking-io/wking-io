@@ -1,49 +1,45 @@
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
-  pathPrefix: '/',
   siteMetadata: {
-    title: 'Front End Developer | William King',
-    author: 'William King',
+    title: `wking`,
+    description: `Sharing projects and articles on functional programming and frontend development.`,
+    author: `@wking__`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: `src`,
+        path: `${__dirname}/src`,
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        trackingId: 'UA-60158504-6',
+        name: `wking`,
+        short_name: `wking`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
+        display: `minimal-ui`,
+        icon: `src/images/wking-logo.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-offline`,
   ],
-};
+}
