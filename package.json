@@ -2,6 +2,7 @@
   "name": "wking-io",
   "private": true,
   "dependencies": {
+    "email-validator": "2.0.4",
     "gatsby": "2.13.31",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -15,8 +16,10 @@
     "gatsby-transformer-sharp": "^2.1.21",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-collapse": "4.0.3",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-motion": "0.5.2"
   },
   "devDependencies": {
     "prettier": "^1.18.2",
