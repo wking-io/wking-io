@@ -2,7 +2,7 @@ import React from "react"
 
 export const LogoIcon = () => (
   <svg
-    className="w-full h-full"
+    className="w-auto h-full"
     width="auto"
     height="auto"
     xmlns="http://www.w3.org/2000/svg"
