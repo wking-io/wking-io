@@ -114,9 +114,11 @@ export default ({ data, location }) => {
             <TabPanel>
               <ToDoList className="my-12">
                 <ToDo checked className="mb-10"><p className="font-medium">Launch letting community know what I’m going to be trying to do</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Launch letting community know what I’m going to be trying to do</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Launch letting community know what I’m going to be trying to do</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Launch letting community know what I’m going to be trying to do</p></ToDo>
+                <ToDo className="mb-10"><p className="font-medium">Think through and share why Wordpress Needs a Frontend Framework</p></ToDo>
+                <ToDo className="mb-10"><p className="font-medium">Plan plugin ideas that would be best fit for Elm and Wordpress</p></ToDo>
+                <ToDo className="mb-10"><p className="font-medium">Build Plugin: Springboard</p></ToDo>
+                <ToDo className="mb-10"><p className="font-medium">Build Plugin: Ichabod</p></ToDo>
+                <ToDo className="mb-10"><p className="font-medium">Not sure what is next...</p></ToDo>
               </ToDoList>
             </TabPanel>
             <TabPanel>
