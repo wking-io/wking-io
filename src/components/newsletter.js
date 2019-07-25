@@ -1,5 +1,6 @@
 // Dependencies
 import React, { useState } from "react"
+import VisuallyHidden from "@reach/visually-hidden"
 import { validate } from "email-validator"
 import { Collapse } from "react-collapse"
 
@@ -7,7 +8,7 @@ const VALID = "valid"
 const EMAIL_ERROR = "error"
 const EMAIL_EMPTY = "empty"
 
-export const NewsletterInput = ({ dark = false }) => {
+export const NewsletterInput = ({ theme = 'default', dark = false }) => {
   const [valid, setValid] = useState(EMAIL_EMPTY)
   const validateForm = ({ target }) => {
     if (target.value && target.value.length >= 0) {
@@ -69,11 +70,11 @@ export const NewsletterInput = ({ dark = false }) => {
         } rounded border border-black p-2 flex flex-col md:flex-row justify-between w-full bg-white relative z-20`}
       >
         <input type="hidden" name="form-name" value="newsletter-signups" />
-        <p class="visually-hidden">
+        <VisuallyHidden>
           <label>
             Don’t fill this out if you're human: <input name="bot-field" />
           </label>
-        </p>
+        </VisuallyHidden>
         <input
           className="pt-2 text-center md:text-left pb-4 md:p-2 flex-1 text-black"
           type="text"
@@ -82,7 +83,7 @@ export const NewsletterInput = ({ dark = false }) => {
           onChange={validateForm}
         />
         <input
-          className={`btn btn--primary w-auto px-3 capitalize ${getInputClass(
+          className={`btn ${theme === 'elm-press' ? 'btn--secondary' : 'btn--primary'} w-auto px-3 capitalize ${getInputClass(
             valid
           )}`}
           type="submit"
@@ -100,8 +101,8 @@ export const NewsletterInput = ({ dark = false }) => {
   )
 }
 
-export const Newsletter = () => (
-  <div className="bg-black text-white text-center py-20 px-8 md:px-16">
+export const Newsletter = ({ theme = 'default' }) => (
+  <div className="bg-black font-sans text-white text-center py-20 px-8 md:px-16">
     <div className="max-w-3xl mx-auto">
       <h3 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight">
         Get this stuff shoved in your inbox!
@@ -111,12 +112,12 @@ export const Newsletter = () => (
         projects like elm-live and elm-press or be a part of the research and
         direction of the projects feel free to signup for my newsletter below.
         If you don’t want to do that you can always{" "}
-        <a className="link" href="https://twitter.com/@wking__">
+        <a className={`link ${theme === 'elm-press' ? 'link--secondary' : null}`} href="https://twitter.com/@wking__">
           follow me on Twitter
         </a>{" "}
         and I will try and make updates there too.
       </p>
-      <NewsletterInput dark />
+      <NewsletterInput theme={theme} dark />
     </div>
   </div>
 )

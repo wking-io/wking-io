@@ -2,6 +2,9 @@
   "name": "wking-io",
   "private": true,
   "dependencies": {
+    "@reach/rect": "0.2.1",
+    "@reach/tabs": "0.1.6",
+    "@reach/visually-hidden": "0.1.4",
     "email-validator": "2.0.4",
     "gatsby": "2.13.31",
     "gatsby-image": "^2.1.4",

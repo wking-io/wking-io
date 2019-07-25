@@ -4,9 +4,9 @@ import React from "react"
 // Components
 import Nav from "./nav"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, theme }) => (
   <>
-    <Nav />
+    <Nav theme={theme} />
     {children}
   </>
 )
