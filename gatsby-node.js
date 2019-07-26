@@ -26,6 +26,13 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      allProjectsJson {
+        edges {
+          node {
+            id
+          }
+        }
+      }
     }
   `).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -34,6 +41,15 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/article.js`),
         context: {
           slug: node.fields.slug,
+        },
+      })
+    })
+    result.data.allProjectsJson.edges.forEach(({ node }) => {
+      createPage({
+        path: `/projects/${node.id}`,
+        component: path.resolve(`./src/templates/project.js`),
+        context: {
+          id: node.id,
         },
       })
     })

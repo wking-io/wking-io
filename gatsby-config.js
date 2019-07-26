@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,7 +37,7 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `src/images/wking-logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/wking-logo-square.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-postcss`,

@@ -1,6 +1,8 @@
 ---
 title: "Only Sith deal in absolutes."
 date: "2018-12-15"
+type: "article"
+project: "general"
 ---
 
 ### Thoughts on the "right way" to build software

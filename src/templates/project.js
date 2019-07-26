@@ -25,26 +25,31 @@ const ToDoList = ({ children, className }) => (
 
 const ToDo = ({ checked = false, children, className }) => (
   <li className={`flex ${className}`}>
-    <div className={`check__box ${checked ? 'check__box--checked' : null} z-30 w-6 h-6 rounded relative mr-4 z-20`}>{checked ? <Check /> : null}</div>
+    <div
+      className={`check__box ${
+        checked ? "check__box--checked" : null
+      } z-30 w-6 h-6 rounded relative mr-4 z-20`}
+    >
+      {checked ? <Check /> : null}
+    </div>
     <div className="relative">
       {children}
-      {checked ? <Strikethrough/> : null}
+      {checked ? <Strikethrough /> : null}
     </div>
   </li>
 )
 
-const AnimatedContext = React.createContext();
+const AnimatedContext = React.createContext()
 
 function AnimatedTabs(props) {
-
   // need to store the position of the selected Tab so we can
   // animate the bar to its position
-  const [selectedRect, setSelectedRect] = useState(null);
+  const [selectedRect, setSelectedRect] = useState(null)
 
   // need to measure the parent element so we can measure
   // the relative "left" for the bar
-  const tabsRef = useRef();
-  const tabsRect = useRect(tabsRef);
+  const tabsRef = useRef()
+  const tabsRect = useRect(tabsRef)
 
   // Put the function to change the positions on context so the
   // Tabs down the tree can easily access it
@@ -65,65 +70,72 @@ function AnimatedTabs(props) {
             // rect from the selected tab to set the styles of the bar
             transition: "all 300ms ease",
             left: selectedRect && selectedRect.left - tabsRect.left,
-            width: selectedRect && selectedRect.width
+            width: selectedRect && selectedRect.width,
           }}
         />
 
         {props.children[1]}
       </Tabs>
     </AnimatedContext.Provider>
-  );
+  )
 }
 
 function AnimatedTab(props) {
-  const { isSelected } = props;
+  const { isSelected } = props
 
   // Each tab measures itself
-  const ref = useRef();
-  const rect = useRect(ref, isSelected);
+  const ref = useRef()
+  const rect = useRect(ref, isSelected)
 
   // and calls up to the parent when it becomes selected
   // we useLayoutEffect to avoid flicker
-  const setSelectedRect = useContext(AnimatedContext);
+  const setSelectedRect = useContext(AnimatedContext)
   useLayoutEffect(() => {
-    if (isSelected) setSelectedRect(rect);
-  }, [isSelected, rect, setSelectedRect]);
+    if (isSelected) setSelectedRect(rect)
+  }, [isSelected, rect, setSelectedRect])
 
-  return (
-    <Tab ref={ref} {...props} />
-  );
+  return <Tab ref={ref} {...props} />
 }
 
 export default ({ data, location }) => {
+  console.log(data)
   return (
     <Layout theme="elm-press">
       <SEO title="Bringing Elm into the Wordpress community the right way." />
       <div className="font-sans max-w-3xl px-8 mx-auto pt-40 text-black pb-24">
         <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
-          Bringing Elm into the Wordpress community the right way.
+          {data.projectsJson.title}
         </h2>
         <Social className="mb-16" link={location.href} />
-        <p className="text-lg leading-relaxed mb-12">Alrighty, so I think the best way I could go about this is to just build build build. Build an audience of people for feedback. Build plugins to get an idea of how all of this looks like in practice. Who knows what else! Follow along here to keep up to date with what is going on:</p>
+        <p className="text-lg leading-relaxed mb-12">
+          {data.projectsJson.description}
+        </p>
         <AnimatedTabs>
           <TabList className="border-b border-black">
-            <AnimatedTab className="uppercase font-medium px-3 py-1 border-b-4 border-transparent">Roadmap</AnimatedTab>
-            <AnimatedTab className="uppercase font-medium px-3 py-1 border-b-4 border-transparent">Updates</AnimatedTab>
+            <AnimatedTab className="uppercase font-medium px-3 py-1 border-b-4 border-transparent">
+              Roadmap
+            </AnimatedTab>
+            <AnimatedTab className="uppercase font-medium px-3 py-1 border-b-4 border-transparent">
+              Updates
+            </AnimatedTab>
           </TabList>
 
           <TabPanels>
             <TabPanel>
               <ToDoList className="my-12">
-                <ToDo checked className="mb-10"><p className="font-medium">Launch letting community know what I’m going to be trying to do</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Think through and share why Wordpress Needs a Frontend Framework</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Plan plugin ideas that would be best fit for Elm and Wordpress</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Build Plugin: Springboard</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Build Plugin: Ichabod</p></ToDo>
-                <ToDo className="mb-10"><p className="font-medium">Not sure what is next...</p></ToDo>
+                {data.projectsJson.roadmap.map(todo => (
+                  <ToDo checked={todo.complete} className="mb-10">
+                    <p className="font-medium">{todo.content}</p>
+                  </ToDo>
+                ))}
               </ToDoList>
             </TabPanel>
             <TabPanel>
               {data.allMarkdownRemark.edges.map(({ node }) => (
-                <div className="article-card__wrapper border-t-2 border-grey-200" key={node.id}>
+                <div
+                  className="article-card__wrapper border-t-2 border-grey-200"
+                  key={node.id}
+                >
                   <a
                     className="article-card py-6 md:py-8 block"
                     href={node.fields.slug}
@@ -132,8 +144,12 @@ export default ({ data, location }) => {
                       {node.frontmatter.title}
                     </h3>
                     <div className="flex">
-                    <p className="text-grey-600 mr-4">{node.frontmatter.date}</p>
-                    <p className="bg-secondary-light font-medium px-2 rounded text-white">Article</p>
+                      <p className="text-grey-600 mr-4">
+                        {node.frontmatter.date}
+                      </p>
+                      <p className="bg-secondary-light font-medium px-2 rounded text-white capitalize">
+                        {node.frontmatter.type}
+                      </p>
                     </div>
                   </a>
                 </div>
@@ -142,14 +158,17 @@ export default ({ data, location }) => {
           </TabPanels>
         </AnimatedTabs>
       </div>
-      <Newsletter theme="elm-press" />
+      <Newsletter theme={data.projectsJson.id} />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query($id: String!) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { project: { eq: $id } } }
+    ) {
       totalCount
       edges {
         node {
@@ -157,11 +176,21 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            type
           }
           fields {
             slug
           }
         }
+      }
+    }
+    projectsJson(id: { eq: $id }) {
+      title
+      description
+      id
+      roadmap {
+        complete
+        content
       }
     }
   }

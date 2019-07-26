@@ -32,10 +32,7 @@ const IndexPage = () => (
             the right tools to bring Elm into their development workflow.
           </p>
           <p>
-            <Link
-              className="btn btn--outline-light"
-              to="articles/wordpress-needs-a-frontend-framework"
-            >
+            <Link className="btn btn--outline-light" to="/projects/elm-press">
               Find Out More
             </Link>
           </p>
