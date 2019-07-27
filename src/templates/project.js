@@ -32,10 +32,7 @@ const ToDo = ({ checked = false, children, className }) => (
     >
       {checked ? <Check /> : null}
     </div>
-    <div className="relative">
-      {children}
-      {checked ? <Strikethrough /> : null}
-    </div>
+    <div className={checked ? "text-grey-400" : ""}>{children}</div>
   </li>
 )
 

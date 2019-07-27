@@ -4,9 +4,13 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    title: `wking`,
-    description: `Sharing projects and articles on functional programming and frontend development.`,
-    author: `@wking__`,
+    title: "wking",
+    titleTemplate: "%s | wking",
+    description:
+      "Sharing projects and content on functional programming and frontend development.",
+    url: "https://wking.io",
+    image: "/images/snape.jpg",
+    twitterUsername: "@wking__",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
