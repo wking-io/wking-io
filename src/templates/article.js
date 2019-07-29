@@ -20,7 +20,7 @@ const getArticleImage = project => {
 export default ({ data, location }) => {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout theme={post.frontmatter.project}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -33,7 +33,7 @@ export default ({ data, location }) => {
         </h2>
         <Social className="mb-16" link={location.href} />
         <div
-          className="post-content mb-8"
+          className={`post-content mb-8 theme-${post.frontmatter.project}`}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <p className="text-xl mb-4">
@@ -41,7 +41,7 @@ export default ({ data, location }) => {
         </p>
         <TweetEmbed id={post.frontmatter.tweet} placeholder={"loading"} />
       </div>
-      <Newsletter />
+      <Newsletter theme={post.frontmatter.project} />
     </Layout>
   )
 }
