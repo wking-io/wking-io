@@ -9,7 +9,7 @@ module.exports = {
     description:
       "Sharing projects and content on functional programming and frontend development.",
     url: "https://wking.io",
-    image: "/images/snape.jpg",
+    image: "/images/projects/wking.jpg",
     twitterUsername: "@wking__",
   },
   plugins: [
