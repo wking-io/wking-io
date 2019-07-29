@@ -15,10 +15,6 @@ const Check = () => (
   </>
 )
 
-const Strikethrough = () => (
-  <div className="h-1 absolute z-10 bg-grey-400 w-full center-y"></div>
-)
-
 const ToDoList = ({ children, className }) => (
   <ul className={`todo-list ${className}`}>{children}</ul>
 )
@@ -28,7 +24,7 @@ const ToDo = ({ checked = false, children, className }) => (
     <div
       className={`check__box ${
         checked ? "check__box--checked" : null
-      } z-30 w-6 h-6 rounded relative mr-4 z-20`}
+      } z-30 w-6 h-6 rounded relative mr-4 z-20 flex-shrink-0`}
     >
       {checked ? <Check /> : null}
     </div>
@@ -94,11 +90,23 @@ function AnimatedTab(props) {
   return <Tab ref={ref} {...props} />
 }
 
+const getArticleImage = project => {
+  switch (project) {
+    case "elm-press":
+      return "/images/projects/elm-press.jpg"
+    case "elm-live":
+      return "/images/projects/elm-live.jpg"
+    default:
+      return "/images/projects/wking.jpg"
+  }
+}
+
 export default ({ data, location }) => {
   console.log(data)
   return (
     <Layout theme="elm-press">
-      <SEO title="Bringing Elm into the Wordpress community the right way." />
+      <SEO title="Bringing Elm into the Wordpress community the right way." description={data.projectsJson.excerpt} image={getArticleImage(data.projectsJson.id)}
+       />
       <div className="font-sans max-w-3xl px-8 mx-auto pt-40 text-black pb-24">
         <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
           {data.projectsJson.title}
@@ -183,6 +191,7 @@ export const query = graphql`
     }
     projectsJson(id: { eq: $id }) {
       title
+      excerpt
       description
       id
       roadmap {

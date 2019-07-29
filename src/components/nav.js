@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import VisuallyHidden from "@reach/visually-hidden"
 
 // Components
-import { LogoIcon, ElmPressIcon } from "./icons"
+import { LogoIcon, ProjectIcons } from "./icons"
 
 const Logo = () => (
   <h1 className="w-auto h-8 md:h-12 self-start">
@@ -19,7 +19,7 @@ const ElmPressLogo = () => (
   <h1 className="w-auto h-16 md:h-24 self-start">
     <Link to="/">
       <VisuallyHidden>elm-press</VisuallyHidden>
-      <ElmPressIcon />
+      <ProjectIcons id="elm-press" />
     </Link>
   </h1>
 )

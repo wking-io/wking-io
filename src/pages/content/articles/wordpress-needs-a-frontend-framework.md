@@ -3,6 +3,7 @@ title: "Wordpress needs a frontend framework."
 date: "2019-07-19"
 type: "article"
 project: "elm-press"
+description: "The complexity of websites is growing exponentially and Wordpress is not immune. Although commonly thought of as a blogging platform, the company I work for and thousands of other use it for so much more."
 ---
 
 The complexity of websites is growing exponentially and Wordpress is not immune. Although commonly thought of as a blogging platform, the company I work for and thousands of other use it for so much more.

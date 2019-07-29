@@ -5,11 +5,27 @@ import Social from "../components/social"
 import { Newsletter } from "../components/newsletter"
 import SEO from "../components/seo"
 
+const getArticleImage = project => {
+  switch (project) {
+    case "elm-press":
+      return "/images/projects/elm-press.jpg"
+    case "elm-live":
+      return "/images/projects/elm-live.jpg"
+    default:
+      return "/images/projects/wking.jpg"
+  }
+}
+
 export default ({ data, location }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={getArticleImage(post.frontmatter.project)}
+        article
+      />
       <div className="max-w-3xl px-8 mx-auto pt-40 text-black pb-24">
         <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
           {post.frontmatter.title}
@@ -31,6 +47,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
+        project
       }
     }
   }
