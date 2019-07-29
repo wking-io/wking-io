@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import TweetEmbed from "react-tweet-embed"
 import Layout from "../components/layout"
 import Social from "../components/social"
 import { Newsletter } from "../components/newsletter"
@@ -32,9 +33,13 @@ export default ({ data, location }) => {
         </h2>
         <Social className="mb-16" link={location.href} />
         <div
-          className="post-content"
+          className="post-content mb-8"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <p className="text-xl mb-4">
+          <strong>Join the discussion here:</strong>
+        </p>
+        <TweetEmbed id={post.frontmatter.tweet} placeholder={"loading"} />
       </div>
       <Newsletter />
     </Layout>
@@ -49,6 +54,7 @@ export const query = graphql`
         title
         description
         project
+        tweet
       }
     }
   }

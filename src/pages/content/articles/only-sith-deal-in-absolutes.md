@@ -4,6 +4,7 @@ date: "2018-12-15"
 type: "article"
 project: "general"
 description: 'Thoughts on the "right way" to build software'
+tweet: "1155900034002669568"
 ---
 
 ### Thoughts on the "right way" to build software

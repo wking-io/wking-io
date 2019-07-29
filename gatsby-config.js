@@ -22,7 +22,12 @@ module.exports = {
         path: `${__dirname}/src`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["@weknow/gatsby-remark-twitter"],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
