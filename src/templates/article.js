@@ -61,9 +61,7 @@ export default ({ data, location }) => {
                   {children}
                 </a>
               ),
-              img: props => (
-                <img {...props} className="w-full block" />
-              ),
+              img: props => <img {...props} className="w-full block" />,
               BlockQuote,
               Link,
               Tweet,
@@ -86,8 +84,8 @@ export default ({ data, location }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
       body
       frontmatter {
         title

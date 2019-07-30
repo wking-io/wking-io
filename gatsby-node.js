@@ -13,13 +13,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  return graphql(`
-    {
+  const result = await graphql(`
+    query {
       allMdx {
         edges {
           node {
+            id
             fields {
               slug
             }
@@ -34,24 +35,32 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-    result.data.allMdx.edges.forEach(({ node }) => {
-      createPage({
-        path: node.fields.slug,
-        component: path.resolve(`./src/templates/article.js`),
-        context: {
-          slug: node.fields.slug,
-        },
-      })
+  `)
+
+  if (result.errors) {
+    reporter.panic('🚨  ERROR: Loading "createPages" query', result.errors)
+  }
+
+  const posts = result.data.allMdx.edges
+  const projects = result.data.allProjectsJson.edges
+
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/article.js`),
+      context: {
+        id: node.id,
+      },
     })
-    result.data.allProjectsJson.edges.forEach(({ node }) => {
-      createPage({
-        path: `/projects/${node.id}`,
-        component: path.resolve(`./src/templates/project.js`),
-        context: {
-          id: node.id,
-        },
-      })
+  })
+
+  projects.forEach(({ node }) => {
+    createPage({
+      path: `/projects/${node.id}`,
+      component: path.resolve(`./src/templates/project.js`),
+      context: {
+        id: node.id,
+      },
     })
   })
 }
