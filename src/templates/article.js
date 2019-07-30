@@ -61,7 +61,9 @@ export default ({ data, location }) => {
                   {children}
                 </a>
               ),
-              img: props => <img {...props} className="w-full block" />,
+              img: ({ alt, ...props }) => (
+                <img {...props} alt={alt} className="w-full block" />
+              ),
               BlockQuote,
               Link,
               Tweet,
