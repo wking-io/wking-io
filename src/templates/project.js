@@ -105,8 +105,11 @@ export default ({ data, location }) => {
   console.log(data)
   return (
     <Layout theme="elm-press">
-      <SEO title="Bringing Elm into the Wordpress community the right way." description={data.projectsJson.excerpt} image={getArticleImage(data.projectsJson.id)}
-       />
+      <SEO
+        title="Bringing Elm into the Wordpress community the right way."
+        description={data.projectsJson.excerpt}
+        image={getArticleImage(data.projectsJson.id)}
+      />
       <div className="font-sans max-w-3xl px-8 mx-auto pt-40 text-black pb-24">
         <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
           {data.projectsJson.title}
@@ -136,7 +139,7 @@ export default ({ data, location }) => {
               </ToDoList>
             </TabPanel>
             <TabPanel>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
+              {data.allMdx.edges.map(({ node }) => (
                 <div
                   className="article-card__wrapper border-t-2 border-grey-200"
                   key={node.id}
@@ -170,7 +173,7 @@ export default ({ data, location }) => {
 
 export const query = graphql`
   query($id: String!) {
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { project: { eq: $id } } }
     ) {

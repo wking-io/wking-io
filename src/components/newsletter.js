@@ -8,7 +8,7 @@ const VALID = "valid"
 const EMAIL_ERROR = "error"
 const EMAIL_EMPTY = "empty"
 
-export const NewsletterInput = ({ theme = 'default', dark = false }) => {
+export const NewsletterInput = ({ project = "default", dark = false }) => {
   const [valid, setValid] = useState(EMAIL_EMPTY)
   const validateForm = ({ target }) => {
     if (target.value && target.value.length >= 0) {
@@ -83,9 +83,9 @@ export const NewsletterInput = ({ theme = 'default', dark = false }) => {
           onChange={validateForm}
         />
         <input
-          className={`btn ${theme === 'elm-press' ? 'btn--secondary' : 'btn--primary'} w-auto px-3 capitalize ${getInputClass(
-            valid
-          )}`}
+          className={`btn ${
+            project === "elm-press" ? "btn--secondary" : "btn--primary"
+          } w-auto px-3 capitalize ${getInputClass(valid)}`}
           type="submit"
           value="Send me updates"
           disabled={isDisabled(valid)}
@@ -101,23 +101,36 @@ export const NewsletterInput = ({ theme = 'default', dark = false }) => {
   )
 }
 
-export const Newsletter = ({ theme = 'default' }) => (
-  <div className="bg-black font-sans text-white text-center py-20 px-8 md:px-16">
+export const Newsletter = ({ dark = true, project = "default" }) => (
+  <div
+    className={`${
+      dark ? "bg-black text-white" : "bg-white text-black"
+    } font-sans text-center py-20 px-8 md:px-16`}
+  >
     <div className="max-w-3xl mx-auto">
       <h3 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight">
         Get this stuff shoved in your inbox!
       </h3>
-      <p className="leading-relaxed text-grey-300 mb-12">
+      <p
+        className={`${
+          dark ? "text-grey-300" : "text-black"
+        } leading-relaxed mb-12`}
+      >
         Okay not really, but If you would like to hear about progress on
         projects like elm-live and elm-press or be a part of the research and
         direction of the projects feel free to signup for my newsletter below.
         If you don’t want to do that you can always{" "}
-        <a className={`link ${theme === 'elm-press' ? 'link--secondary' : null}`} href="https://twitter.com/@wking__">
+        <a
+          className={`link ${
+            project === "elm-press" ? "link--secondary" : null
+          }`}
+          href="https://twitter.com/@wking__"
+        >
           follow me on Twitter
         </a>{" "}
         and I will try and make updates there too.
       </p>
-      <NewsletterInput theme={theme} dark />
+      <NewsletterInput dark={dark} project={project} />
     </div>
   </div>
 )

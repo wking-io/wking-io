@@ -1,9 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby"
-import TweetEmbed from "react-tweet-embed"
+import { graphql, Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Social from "../components/social"
+import Tweet from "../components/tweet"
 import { Newsletter } from "../components/newsletter"
+import { BlockQuote } from "../components/designSystem"
 import SEO from "../components/seo"
 
 const getArticleImage = project => {
@@ -18,7 +21,7 @@ const getArticleImage = project => {
 }
 
 export default ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.mdx
   return (
     <Layout theme={post.frontmatter.project}>
       <SEO
@@ -32,24 +35,60 @@ export default ({ data, location }) => {
           {post.frontmatter.title}
         </h2>
         <Social className="mb-16" link={location.href} />
-        <div
-          className={`post-content mb-8 theme-${post.frontmatter.project}`}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className={`post-content mb-8 theme-${post.frontmatter.project}`}>
+          <MDXProvider
+            components={{
+              h3: ({ children, ...props }) => (
+                <h3
+                  {...props}
+                  className="leading-tight mt-12 mb-6 text-3xl font-display font-bold"
+                >
+                  {children}
+                </h3>
+              ),
+              p: props => (
+                <p {...props} className="leading-relaxed mb-6 text-lg" />
+              ),
+              a: ({ children, ...props }) => (
+                <a
+                  {...props}
+                  className={`link${
+                    post.frontmatter.project === "elm-press"
+                      ? " link--secondary"
+                      : ""
+                  }`}
+                >
+                  {children}
+                </a>
+              ),
+              img: props => (
+                <img {...props} className="w-full block" />
+              ),
+              BlockQuote,
+              Link,
+              Tweet,
+            }}
+          >
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </MDXProvider>
+        </div>
         <p className="text-xl mb-4">
           <strong>Join the discussion here:</strong>
         </p>
-        <TweetEmbed id={post.frontmatter.tweet} placeholder={"loading"} />
+        <Tweet
+          tweetId={post.frontmatter.tweet}
+          project={post.frontmatter.project}
+        />
       </div>
-      <Newsletter theme={post.frontmatter.project} />
+      <Newsletter project={post.frontmatter.project} />
     </Layout>
   )
 }
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         title
         description

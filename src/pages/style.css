@@ -10,7 +10,7 @@
   @apply bg-gradient font-medium;
   background-repeat: no-repeat;
   background-size: 100% 4px;
-  background-position: 0 86%;
+  background-position: 0 92%;
   transition: background-image 0.25s ease-in;
 }
 
@@ -119,42 +119,6 @@
   .homepage-hero {
     font-size: 5vw;
   }
-}
-
-.post-content h3 {
-  @apply leading-tight mt-12 mb-6 text-3xl font-display font-bold;
-}
-
-.post-content p {
-  @apply leading-relaxed mb-6 text-lg;
-}
-
-.post-content blockquote {
-  @apply py-4;
-}
-
-.post-content blockquote p {
-  @apply leading-normal border-l-4 border-grey-600 text-xl italic -ml-6 pl-6;
-}
-
-.post-content a {
-  @apply bg-gradient font-medium;
-  background-repeat: no-repeat;
-  background-size: 100% 4px;
-  background-position: 0 86%;
-  transition: background-image 0.25s ease-in;
-}
-
-.post-content a:hover {
-  @apply bg-gradient-hover;
-}
-
-.post-content.theme-elm-press a {
-  @apply bg-secondary-gradient;
-}
-
-.post-content.theme-elm-press a:hover {
-  @apply bg-secondary-gradient-hover;
 }
 
 .article-card__wrapper:first-child {
