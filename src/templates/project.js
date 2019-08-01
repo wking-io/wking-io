@@ -143,8 +143,25 @@ export default ({ data, location }) => {
             <TabPanel>
               <ToDoList className="my-12">
                 {data.projectsJson.roadmap.map(todo => (
-                  <ToDo checked={todo.complete} className="mb-10">
+                  <ToDo
+                    checked={todo.complete}
+                    className={
+                      Array.isArray(todo.children) && todo.children.length > 0
+                        ? "mb-3"
+                        : "mb-10"
+                    }
+                  >
                     <p className="font-medium">{todo.content}</p>
+                    {Array.isArray(todo.children) &&
+                    todo.children.length > 0 ? (
+                      <ToDoList className="mt-12 ml-4">
+                        {todo.children.map(child => (
+                          <ToDo checked={child.complete} className="mb-10">
+                            <p className="font-medium">{child.content}</p>
+                          </ToDo>
+                        ))}
+                      </ToDoList>
+                    ) : null}
                   </ToDo>
                 ))}
               </ToDoList>
@@ -215,6 +232,10 @@ export const query = graphql`
       roadmap {
         complete
         content
+        children {
+          complete
+          content
+        }
       }
     }
   }

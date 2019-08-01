@@ -23,7 +23,32 @@
     {
       "content": "Build Plugin: Springboard",
       "complete": false,
-      "children": []
+      "children": [
+        {
+          "content": "Think through problem that plugin will solve, and the features needed to demonstrate the complexity Elm is good at handling",
+          "complete": true
+        },
+        {
+          "content": "Map out plugin UX and states",
+          "complete": false
+        },
+        {
+          "content": "Design the screens and branding",
+          "complete": false
+        },
+        {
+          "content": "Define domain and Elm types",
+          "complete": false
+        },
+        {
+          "content": "Build initial plugin architecture using WordPress API and Elm",
+          "complete": false
+        },
+        {
+          "content": "Build, Build, Build",
+          "complete": false
+        }
+      ]
     },
     {
       "content": "Build Plugin: Ichabod",
