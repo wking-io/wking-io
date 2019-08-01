@@ -101,6 +101,17 @@ const getArticleImage = project => {
   }
 }
 
+const getTypeColor = type => {
+  switch (type) {
+    case "article":
+      return "secondary-light"
+    case "screencast":
+      return "secondary"
+    default:
+      return "secondary-dark"
+  }
+}
+
 export default ({ data, location }) => {
   console.log(data)
   return (
@@ -155,7 +166,11 @@ export default ({ data, location }) => {
                       <p className="text-grey-600 mr-4">
                         {node.frontmatter.date}
                       </p>
-                      <p className="bg-secondary-light font-medium px-2 rounded text-white capitalize">
+                      <p
+                        className={`bg-${getTypeColor(
+                          node.frontmatter.type
+                        )} font-medium px-2 rounded text-white capitalize`}
+                      >
                         {node.frontmatter.type}
                       </p>
                     </div>

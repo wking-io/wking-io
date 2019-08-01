@@ -7,6 +7,7 @@ import Social from "../components/social"
 import Tweet from "../components/tweet"
 import { Newsletter } from "../components/newsletter"
 import { BlockQuote } from "../components/designSystem"
+import { YoutubeVideo } from "../components/video"
 import SEO from "../components/seo"
 
 const getArticleImage = project => {
@@ -35,7 +36,9 @@ export default ({ data, location }) => {
           {post.frontmatter.title}
         </h2>
         <Social className="mb-16" link={location.href} />
-        <div className={`post-content mb-8 theme-${post.frontmatter.project}`}>
+        <div
+          className={`post-content font-sans mb-8 theme-${post.frontmatter.project}`}
+        >
           <MDXProvider
             components={{
               h3: ({ children, ...props }) => (
@@ -65,6 +68,7 @@ export default ({ data, location }) => {
                 <img {...props} alt={alt} className="w-full block" />
               ),
               BlockQuote,
+              YoutubeVideo,
               Link,
               Tweet,
             }}
