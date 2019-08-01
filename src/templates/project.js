@@ -198,7 +198,7 @@ export default ({ data, location }) => {
           </TabPanels>
         </AnimatedTabs>
       </div>
-      <Newsletter theme={data.projectsJson.id} />
+      <Newsletter project={data.projectsJson.id} />
     </Layout>
   )
 }
