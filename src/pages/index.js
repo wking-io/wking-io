@@ -14,7 +14,7 @@ const IndexPage = () => (
       <div className="flex-1 flex items-end justify-center">
         <h2 className="homepage-hero font-display font-bold leading-tight md:mb-20 pt-40 p-12 md:p-0 md:pt-32">
           My name is Will King, <br className="hidden md:inline" />
-          and I build things for the web.
+          and I am a Frontend Developer. I use Elm when I can.
         </h2>
       </div>
       <div className="flex flex-col w-full lg:flex-row font-sans">

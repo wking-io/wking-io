@@ -4,7 +4,7 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    title: "wking",
+    title: "Frontend Developer. Using Elm when I can.",
     titleTemplate: "%s | wking",
     description:
       "Sharing projects and content on functional programming and frontend development.",
