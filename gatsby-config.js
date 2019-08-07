@@ -8,7 +8,7 @@ module.exports = {
     titleTemplate: "%s | wking",
     description:
       "Sharing projects and content on functional programming and frontend development.",
-    url: "https://wking.io",
+    url: "https://www.wking.dev",
     image: "/images/projects/wking.jpg",
     twitterUsername: "@wking__",
   },
