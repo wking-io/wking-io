@@ -30,11 +30,11 @@
         },
         {
           "content": "Map out plugin UX and states",
-          "complete": false
+          "complete": true
         },
         {
           "content": "Design the screens and branding",
-          "complete": false
+          "complete": true
         },
         {
           "content": "Define domain and Elm types",
