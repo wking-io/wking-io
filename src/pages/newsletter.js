@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Newsletter } from "../components/newsletter"
 
-const NewsletterThankYou = () => (
+const NewsletterPage = () => (
   <Layout>
     <SEO title="Sign up for updates" />
     <div
@@ -16,4 +16,4 @@ const NewsletterThankYou = () => (
   </Layout>
 )
 
-export default NewsletterThankYou
+export default NewsletterPage
