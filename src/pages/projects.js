@@ -1,7 +1,7 @@
 // Dependencies
 import React from "react"
 import { graphql } from "gatsby"
-import Link from "../components/Link"
+import Link from "../components/link"
 
 // Components
 import SEO from "../components/seo"
