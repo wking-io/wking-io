@@ -1,0 +1,7 @@
+{
+  "external": "https://www.elm-live.com",
+  "id": "elm-live",
+  "name": "elm-live",
+  "title": "A flexible dev server for Elm. Live reload included.",
+  "excerpt": "A thin wrapper around elm make, elm-live is a dev server that gives you a few extra convenience features during development. Features include pushstate for SPA development, proxies, and more."
+}

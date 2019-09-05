@@ -2,10 +2,24 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-export const ElmPressHeader = () => {
+export default function({ projectId = "default" }) {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/elm-press.jpg" }) {
+      elmpress: file(relativePath: { eq: "images/projects/elm-press.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      elmlive: file(relativePath: { eq: "images/projects/elm-live.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      default: file(relativePath: { eq: "images/projects/wking.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -14,46 +28,10 @@ export const ElmPressHeader = () => {
       }
     }
   `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="elm-press Header" />
-}
-
-export const ElmLiveHeader = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/elm-live.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="elm-live Header" />
-}
-
-export const DefaultHeader = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/default.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-  return <Img fluid={data.file.childImageSharp.fluid} alt="Website Header" />
-}
-
-export default ({ projectId }) => {
-  switch (projectId) {
-    case "elm-press":
-      return <ElmPressHeader />
-    case "elm-live":
-      return <ElmLiveHeader />
-    default:
-      return <DefaultHeader />
-  }
+  return (
+    <Img
+      fluid={data[projectId.replace("-", "")].childImageSharp.fluid}
+      alt="Project Header"
+    />
+  )
 }

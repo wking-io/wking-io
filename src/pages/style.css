@@ -10,7 +10,7 @@
   @apply bg-gradient font-medium;
   background-repeat: no-repeat;
   background-size: 100% 4px;
-  background-position: 0 92%;
+  background-position: 0 calc(100% - 2px);
   transition: background-image 0.25s ease-in;
 }
 
@@ -127,6 +127,17 @@
 
 .article-card:hover .article-card__title {
   @apply underline;
+}
+
+.project-card {
+  @apply w-full;
+}
+
+@screen md {
+  .project-card {
+    @apply mb-8;
+    flex: 0 1 calc(50% - theme("spacing.4"));
+  }
 }
 
 .todo-list {

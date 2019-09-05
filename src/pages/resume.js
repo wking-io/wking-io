@@ -8,7 +8,7 @@ import { ExternalLinkIcon } from "../components/icons"
 const ResumePage = () => (
   <Layout>
     <SEO title="Sign up for updates" />
-    <div className="mt-32 min-h-screen max-w-2xl mx-auto text-black font-sans px-8 mb-20">
+    <div className="mt-32 min-h-screen max-w-2xl mx-auto text-black font-sans px-8 mb-24">
       <div className="">
         <h2 className="font-display font-bold leading-tight text-3xl mb-8">
           My name is Will King, <br className="hidden md:inline" />
@@ -273,6 +273,7 @@ const ResumePage = () => (
         </div>
       </div>
     </div>
+    <Newsletter />
   </Layout>
 )
 
