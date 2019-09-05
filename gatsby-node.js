@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
+            external
           }
         }
       }
@@ -55,12 +56,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   projects.forEach(({ node }) => {
-    createPage({
-      path: `/projects/${node.id}`,
-      component: path.resolve(`./src/templates/project.js`),
-      context: {
-        id: node.id,
-      },
-    })
+    if (node.external.length === 0) {
+      createPage({
+        path: `/projects/${node.id}`,
+        component: path.resolve(`./src/templates/project.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    }
   })
 }
