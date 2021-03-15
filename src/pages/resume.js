@@ -76,11 +76,8 @@ const ResumePage = () => (
           </p>
           <ul className="pt-2">
             <li className="mb-4 flex">
-              <p className="flex-1 font-bold text-sm">Special Camps</p>
-              <a
-                className="flex items-start text-sm mr-4 no-underline hover:underline"
-                href="https://specialcamps.com/"
-              >
+              <p className="flex-1 font-bold text-sm">SecondMile</p>
+              <a className="flex items-start text-sm mr-4  no-underline hover:underline" href="http://secondmile.net/">
                 Website{' '}
                 <span className="h-3 pt-1 pl-1">
                   <ExternalLinkIcon />
@@ -88,7 +85,7 @@ const ResumePage = () => (
               </a>
               <a
                 className="flex items-start text-sm  no-underline hover:underline"
-                href="https://github.com/wking-io/special-camps"
+                href="https://github.com/wking-io/second-mile"
               >
                 Repo{' '}
                 <span className="h-3 pt-1 pl-1">
@@ -142,36 +139,6 @@ const ResumePage = () => (
                 href="http://www.motionworshipband.com/"
               >
                 Website{' '}
-                <span className="h-3 pt-1 pl-1">
-                  <ExternalLinkIcon />
-                </span>
-              </a>
-            </li>
-            <li className="mb-4 flex">
-              <p className="flex-1 font-bold text-sm">Motion Students</p>
-              <a className="flex items-start text-sm  no-underline hover:underline" href="http://motionstudents.com/">
-                Website{' '}
-                <span className="h-3 pt-1 pl-1">
-                  <ExternalLinkIcon />
-                </span>
-              </a>
-            </li>
-            <li className="mb-4 flex">
-              <p className="flex-1 font-bold text-sm">SecondMile [WIP]</p>
-              <a
-                className="flex items-start text-sm mr-4  no-underline hover:underline"
-                href="http://secondmiledevelopment.com/"
-              >
-                Website{' '}
-                <span className="h-3 pt-1 pl-1">
-                  <ExternalLinkIcon />
-                </span>
-              </a>
-              <a
-                className="flex items-start text-sm  no-underline hover:underline"
-                href="https://github.com/wking-io/second-mile"
-              >
-                Repo{' '}
                 <span className="h-3 pt-1 pl-1">
                   <ExternalLinkIcon />
                 </span>

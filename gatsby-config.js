@@ -1,16 +1,15 @@
 require(`dotenv`).config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    title: "Frontend Developer. Using Elm when I can.",
-    titleTemplate: "%s | wking",
-    description:
-      "Sharing projects and content on functional programming and frontend development.",
-    url: "https://www.wking.dev",
-    image: "/images/projects/wking.jpg",
-    twitterUsername: "@wking__",
+    title: 'Frontend Developer. Using Elm when I can.',
+    titleTemplate: '%s | wking',
+    description: 'Sharing projects and content on functional programming and frontend development.',
+    url: 'https://www.wking.dev',
+    image: '/images/projects/wking.jpg',
+    twitterUsername: '@wking__',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -50,23 +49,10 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Roboto Slab`,
-            subsets: [`latin`],
-            variants: [`700`],
-            formats: [`woff`, `woff2`],
-          },
-          {
-            family: `Fira Sans`,
-            subsets: [`latin`],
-            variants: [`400`, `400i`, `500`, `500i`, `700`, `700i`],
-            formats: [`woff`, `woff2`],
-          },
-        ],
+        fonts: [ `Roboto Slab\:700`, `Fira Sans\:400,400i,500,500i,700,700i` ],
       },
     },
   ],
-}
+};
