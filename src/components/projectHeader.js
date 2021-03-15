@@ -1,37 +1,29 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function({ projectId = "default" }) {
-  const data = useStaticQuery(graphql`
-    query {
-      elmpress: file(relativePath: { eq: "images/projects/elm-press.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      elmlive: file(relativePath: { eq: "images/projects/elm-live.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      default: file(relativePath: { eq: "images/projects/wking.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  elmpress: file(relativePath: {eq: "images/projects/elm-press.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 400, layout: CONSTRAINED)
     }
-  `)
+  }
+  elmlive: file(relativePath: {eq: "images/projects/elm-live.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 400, layout: CONSTRAINED)
+    }
+  }
+  default: file(relativePath: {eq: "images/projects/wking.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 400, layout: CONSTRAINED)
+    }
+  }
+}
+`)
   return (
-    <Img
-      fluid={data[projectId.replace("-", "")].childImageSharp.fluid}
-      alt="Project Header"
-    />
-  )
+    <GatsbyImage
+      image={data[projectId.replace("-", "")].childImageSharp.gatsbyImageData}
+      alt="Project Header" />
+  );
 }
