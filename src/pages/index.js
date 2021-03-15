@@ -25,23 +25,18 @@ const IndexPage = () => (
             Product lab that will output resources, courses, and software to help developers not only make money, but
             make a difference in their community by focusing on the web needs of businesses in your local area.
           </p>
-          <p>
-            <Link className="btn btn--outline-light" to="/projects/elm-press">
-              Find Out More
-            </Link>
-          </p>
         </div>
         <div className="border-t border-black w-full py-16 px-12 md:p-12 lg:p-24 flex flex-col items-center justify-center w-full">
           <div className="max-w-5xl w-full mx-auto">
             <div className="flex flex-col md:flex-row mb-12">
               <p className="mb-6 md:mb-0 md:mr-6 leading-relaxed flex-1">
                 I solve problems associated with creating digital products. I have spent a lot of time focusing on the
-                transition from design to frontend development during my career, but now I am interested in backend
-                developments as well. I love learning as much as I can to better understand how to build successful
-                products.
+                transition from design to frontend development during my career, but I have been diving in Elixir and
+                Phoenix to get personal experience building products end-to-end.
               </p>
               <p className="md:ml-6 leading-relaxed flex-1">
-                I am passionate about functional programming and use Elm whenever I can. I maintain{' '}
+                I am passionate building digital products and how to use functional programming to achieve it. I
+                maintain{' '}
                 <a className="link" href="https://elm-live.com">
                   elm-live
                 </a>. If you would like updates on new articles or any of my project subscribe to updates below!
